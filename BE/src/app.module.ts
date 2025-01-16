@@ -17,7 +17,8 @@ import { ConfigModule } from '@nestjs/config';
     ScheduleModule.forRoot(),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: true
+      autoSchemaFile: true,
+      playground: false,
     }),
     TicketsModule,
     PrismaModule,
