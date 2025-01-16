@@ -6,6 +6,7 @@ import { Ticket, TicketPriority, TicketStatus } from "@/types/ticket.type";
 
 import ListCard from "@/components/Card/ListCard/Index";
 import Link from 'next/link'
+import { formatDate } from "@/utilities/formatter.utility";
 
 const ListTicket = observer(() => {
     useEffect(() => {
@@ -89,7 +90,7 @@ const ListTicket = observer(() => {
                         <ListCard
                             title={ticket.title}
                             subtitle={<SubtitleElement {...ticket} />}
-                            date="Sample"
+                            date={formatDate(ticket.createdAt)}
                             status={ticket.status}
                             action={<ActionButtonElement ticket={ticket} onClick={(event) => {
                                 event.preventDefault();

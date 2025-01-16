@@ -39,6 +39,9 @@ export class Ticket {
   @Field(() => TicketStatus, { description: 'Status of ticket' })
   @IsEnum(TicketStatus)
   status: TicketStatus;
+
+  @Field(() => Date, { description: 'Date ticket was created' })
+  createdAt: Date;
 }
 
 @ObjectType()

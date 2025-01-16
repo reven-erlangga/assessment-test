@@ -22,6 +22,7 @@ export const FETCH_TICKET = async () => {
                     title
                     priority
                     status
+                    createdAt
                 }
             }
         `,

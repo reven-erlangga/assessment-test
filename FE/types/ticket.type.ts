@@ -16,6 +16,7 @@ export interface Ticket {
     priority: TicketPriority
     status: TicketStatus
     description: string
+    createdAt: Date
 }
 
 export interface TicketActivity {
